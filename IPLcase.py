@@ -49,7 +49,7 @@ train_X, test_X, train_y, test_y = train_test_split( X ,Y,train_size = 0.8,rando
 # Fitting the Model
 ipl_model_1 = sm.OLS(train_y, train_X).fit()
 ipl_model_1.summary2()
-# http://efavdb.com/interpret-linear-regression/
+
 
 # HS, AGE_2, AVE and COUNTRY_ENG is significant
 # not very intuitive and can be result of multi-collinearity
@@ -108,7 +108,7 @@ def draw_pp_plot( model, title ):
     plt.title( title );
     plt.show();
     
-draw_pp_plot( ipl_model_3,"Figure 4.6 - Normal P-P Plot of Regression Standardized Residuals");
+draw_pp_plot( ipl_model_3," Normal P-P Plot of Regression Standardized Residuals");
 
 # Homoscedasticity
 def get_standardized_values( vals ):
@@ -224,4 +224,3 @@ print('R2 score is {}'.format(r2))
 print('R2 score 2 is {}'.format(r2_1))
 print("\n")
 
-# https://www.statsmodels.org/dev/generated/statsmodels.regression.linear_model.RegressionResults.html
